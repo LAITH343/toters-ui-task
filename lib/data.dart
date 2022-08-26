@@ -221,20 +221,6 @@ List<Widget> MainTags2 = [
 ];
 List<Widget> MainTags3 = [
   TagsCards(
-    "20% خصم",
-    const Color(0xfffef6f3),
-    const Color(0xffcd6131),
-    Icons.discount_outlined,
-    const Color(0xffcd6131),
-  ),
-  TagsCards(
-    "أكسب نقاط",
-    const Color(0xffe8f2fb),
-    const Color(0xff548ab9),
-    Icons.add,
-    const Color(0xff548ab9),
-  ),
-  TagsCards(
     "هدية",
     const Color(0xffe8f2fb),
     const Color(0xffcd6131),
