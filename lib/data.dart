@@ -81,7 +81,7 @@ List<Widget> Tags1 = [
 ];
 List<Widget> Tags2 = [
   TagsCards(
-    "30% احصل على خص",
+    "30% احصل على خصم",
     const Color(0xfffef6f3),
     const Color(0xffcd6131),
     Icons.discount_outlined,
@@ -205,7 +205,7 @@ List<Widget> MainTags1 = [
 ];
 List<Widget> MainTags2 = [
   TagsCards(
-    "30% احصل على خص",
+    "30% احصل على خصم",
     const Color(0xfffef6f3),
     const Color(0xffcd6131),
     Icons.discount_outlined,
@@ -228,7 +228,7 @@ List<Widget> MainTags3 = [
     const Color(0xff548ab9),
   ),
    TagsCards(
-    "30% احصل على خص",
+    "30% احصل على خصم",
     const Color(0xfffef6f3),
     const Color(0xffcd6131),
     Icons.discount_outlined,
