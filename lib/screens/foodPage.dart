@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toters_task/screens/detials.dart';
 
 class FoodPage extends StatefulWidget {
   final String imageasset;
@@ -21,7 +22,7 @@ class FoodPage extends StatefulWidget {
   @override
   State<FoodPage> createState() => _FoodPageState();
 }
-
+int price = 6000;
 class _FoodPageState extends State<FoodPage> {
   @override
   Widget build(BuildContext context) {
@@ -347,20 +348,84 @@ class _FoodPageState extends State<FoodPage> {
                     )
                   ],
                 ),
+              ),
+              Text("شائع", style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+              ),),
+              
+              Container(
+                height: 220,
+                child: SingleChildScrollView(
+                  reverse: true,
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      EmbededFoodCards(context),
+                      EmbededFoodCards(context),
+                      EmbededFoodCards(context),
+                      EmbededFoodCards(context),
+                    ],
+                  ),
+                ),
               )
             ],
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xff5fd1bb),
-        child: Icon(
-          Icons.grid_view,
-          color: Colors.white.withOpacity(0.8),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
+  }
+
+  Padding EmbededFoodCards(BuildContext context) {
+    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                      child: Container(
+                        width: 241,
+                        height: 210,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            SizedBox(height: 20,),
+                            GestureDetector(
+                              onTap: (){
+                                setState(() {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => FoodDetials(name: widget.label, imageasset: widget.imageasset, price: price,)));
+                                });
+                              },
+                              child: Container(
+                                height: 130,
+                                width: 240,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: NetworkImage(widget.imageasset),
+                                    fit: BoxFit.cover,
+                                  )
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    "برجر",
+                                    style: TextStyle(
+                                        fontSize: 18, fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    "د.ع $price",
+                                    style: TextStyle(fontSize: 15, color: Colors.green),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),                  
+                      ),
+                    );
   }
 }
