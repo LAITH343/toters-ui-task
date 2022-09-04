@@ -224,12 +224,12 @@ class _FoodDetialsState extends State<FoodDetials> {
                       horizontal: 10,
                     ),
                     child: GestureDetector(
-                      onTap: (){},
+                      onTap: itemcount != 0 ? (){} : null,
                       child: Container(
                         height: 60,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.green,
+                          color: itemcount != 0 ? Colors.green : Colors.grey,
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -270,6 +270,7 @@ class _FoodDetialsState extends State<FoodDetials> {
           ],
         ),
       ),
+      // bottomNavigationBar: NavBar(),
     );
   }
 }

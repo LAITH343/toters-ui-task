@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toters_task/screens/detials.dart';
+import 'package:toters_task/screens/fooddetails%20.dart';
 
 class FoodPage extends StatefulWidget {
   final String imageasset;

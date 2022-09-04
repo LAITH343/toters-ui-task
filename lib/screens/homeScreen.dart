@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toters_task/data.dart';
+import 'package:toters_task/screens/ButlerPage.dart';
+import 'package:toters_task/screens/ordersPage.dart';
+import 'package:toters_task/screens/profilePage.dart';
+import 'package:toters_task/screens/searchPage.dart';
 import 'package:toters_task/screens/src/AppBar.dart';
 import 'package:toters_task/screens/src/Slider.dart';
 import 'package:toters_task/screens/src/category.dart';
@@ -18,10 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     List<Widget> screens = [
-      emptyScreen(_Cindex),
-      emptyScreen(_Cindex),
-      emptyScreen(_Cindex),
-      emptyScreen(_Cindex),
+      ProfilePage(),
+      OrdersPage(),
+      ButlerPage(),
+      SearchScreen(),
       MainScreen(context)
     ];
     var width = MediaQuery.of(context).size.width;

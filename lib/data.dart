@@ -7,6 +7,8 @@ List<CarouselItem> ImagessliderList = [
   sliderimgMaker("images/banner2.jpg"),
 ];
 
+int Cindex = 0;
+
 CarouselItem sliderimgMaker(String imgpath) {
   return CarouselItem(
     image: AssetImage(
@@ -136,7 +138,7 @@ List<Widget> Tags4 = [
 ];
 
 foodcardData foodcard1 = foodcardData(
-    "برجر",
+    "بايت بركر",
     "لحم",
     "\$\$",
     "فاست فود",
@@ -147,7 +149,7 @@ foodcardData foodcard1 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     Tags1);
 foodcardData foodcard2 = foodcardData(
-    "ريزو",
+    "قصابية محمد ديوان",
     ",",
     "\$\$",
     "عراقي",
@@ -158,7 +160,7 @@ foodcardData foodcard2 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     Tags2);
 foodcardData foodcard3 = foodcardData(
-    "كص دجاج",
+    "كص علي الشهير",
     "فاست فود",
     "\$\$",
     "عراقي",
@@ -169,7 +171,7 @@ foodcardData foodcard3 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     Tags3);
 foodcardData foodcard4 = foodcardData(
-    "صاج دجاج",
+    "الشيف حسين الباشا",
     "فاست فود",
     "\$\$",
     "عراقي",
@@ -180,10 +182,10 @@ foodcardData foodcard4 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     Tags4);
 
-var foodData = food("فاست فود", "جرب اشهر انواع المأكولات السريعة",
+var foodData = food("خصومات السعادة", "جرب اشهر انواع المأكولات السريعة",
     [foodcard1, foodcard2, foodcard3, foodcard4]);
 
-var foodData2 = food("الاكثر طلباً ", "جرب المأكولات الاكثر طلباً ",
+var foodData2 = food("جديد على توترز ", "جرب المأكولات الاكثر طلباً ",
     [foodcard1, foodcard2, foodcard3, foodcard4]);
 
 
@@ -253,7 +255,7 @@ List<Widget> MainTags4 = [
 ];
 
 foodcardData mainfoodcard1 = foodcardData(
-    "دولمة",
+    "طاووق البنوك",
     ",",
     "\$\$",
     "عراقية",
@@ -264,7 +266,7 @@ foodcardData mainfoodcard1 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     MainTags1);
 foodcardData mainfoodcard2 = foodcardData(
-    "برياني",
+    "باسم ابو المحشي",
     "دجاج",
     "\$\$",
     "عراقي",
@@ -275,7 +277,7 @@ foodcardData mainfoodcard2 = foodcardData(
     "نقدم اشهر انواع البرغر و السندويشات ووجبات الدجاج المقرمشة بالاضافة الى مجموعة متنوعة من المشروبات",
     MainTags2);
 foodcardData mainfoodcard3 = foodcardData(
-    "مندي",
+    "خان مندي - المنصور",
     "لحم",
     "\$\$",
     "عراقي",
@@ -287,5 +289,5 @@ foodcardData mainfoodcard3 = foodcardData(
     MainTags3);
 
 
-var mainFooddata = food("الوجبات الرئيسية ", "أفضل الاطباق الرئيسية و الاكثر طلبا ",
+var mainFooddata = food("خصومات اسبوعية ", "أفضل الاطباق الرئيسية و الاكثر طلبا ",
     [mainfoodcard1, mainfoodcard2, mainfoodcard3]);
